@@ -1,0 +1,16 @@
+<!-- >= Umbraco 7.4 -->
+<div ng-controller="bgPicker.Controller" class="bgpicker-wrap">
+	<div class="bgpicker">
+		<div class="bgpicker__no-content" ng-hide="model.value" ng-click="openIconDialog()">
+			<span class="bgpicker__pick">Add icon</span>
+		</div>
+
+		<div class="bgpicker__with-content" ng-click="refresh()" ng-show="model.value">
+			<span class="bgpicker__icon" ng-show="model.value" ng-bind-html="render(model.value)"></span>
+			<em ng-show="model.value">{{model.value}}</em>
+			<span class="bgpicker__remove" ng-show="model.value">Remove</span>
+		</div>
+	</div>
+
+	<umb-overlay ng-if="overlay.show" model="overlay" view="overlay.view" position="right"> </umb-overlay>
+</div>

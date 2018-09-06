@@ -1,0 +1,50 @@
+{
+    propertyEditors: [{
+        alias: "bgIconPicker",
+        name: "BG: Icon Picker",
+        editor: {
+            view: "~/App_Plugins/bgIconPicker/views/bgpicker.html"
+        },
+        prevalues: {
+            fields: [
+                {
+                    label: 'Path to stylesheet*',
+                    description: 'Relative path to the stylesheet. Seperate stylesheet for the icons is recommended.',
+                    key: 'stylePath',
+                    view: 'requiredfield',
+                    validation: 
+                    [
+                        {
+                            type: 'Required' 
+                        }
+                    ]
+                },
+                {
+                    label: 'Class name regex*',
+                    description: 'Regex that matches the class name pattern.',
+                    key: 'styleRegex',
+                    view: 'requiredfield',
+                    validation: 
+                    [
+                        {
+                            type: 'Required' 
+                        }
+                    ]
+                },
+                {
+                    label: 'Icon pattern',
+                    description: 'Default: &lt;i class="{0}"&gt;&lt;/i&gt;. "{0}" will be replaced by the pattern you supply.',
+                    key: 'pattern',
+                    view: 'TextString'
+                }
+            ]
+        }
+    }],
+    javascript: [
+        "~/App_Plugins/bgIconPicker/js/bgPicker.controller.js",
+        "~/App_Plugins/bgIconPicker/js/bgPicker.dialog.controller.js"
+    ],
+	css: [
+		"~/App_Plugins/bgIconPicker/css/app.min.css"
+	]
+}
