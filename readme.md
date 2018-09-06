@@ -11,7 +11,7 @@ Inspired by the [Iconator package](https://our.umbraco.com/projects/backoffice-e
 1. Install the package
 2. Configure the data type
 
-   **Location:** Developer > Data Types > BG: Picker
+   **Location:** Developer > Data Types > BG: Icon Picker
 
 
 ## Configuring the Data Type:
