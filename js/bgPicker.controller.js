@@ -5,7 +5,7 @@ angular.module("umbraco").controller("bgPicker.Controller", function ($scope, $h
 	$scope.icons = [];
 	$scope.pattern = '<i class="{0}"></i>'; // DEFAULT ICON PATTERN
 	$scope.overlay = {
-		view: '/App_Plugins/bgIconPicker/views/bgpicker.dialog.html',
+		view: '/App_Plugins/bgIconPicker/views/bgPicker.dialog.html',
 		width: 500,
 		show: false,
 		title: 'Select an icon',
@@ -86,7 +86,7 @@ angular.module("umbraco").controller("bgPicker.Controller", function ($scope, $h
 	// HELPER FUNCTIONS
 	// =======================
 	
-	$scope.openIconDialog = function() {
+	$scope.openDialog = function() {
 		$scope.overlay.show = true;
 		$scope.overlay.icons = $scope.icons;
 		$scope.overlay.render = $scope.render;

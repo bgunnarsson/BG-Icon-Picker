@@ -1,8 +1,7 @@
-<!-- >= Umbraco 7.4 -->
 <div class="bgpicker-dialog" ng-controller="bgPicker.Dialog.Controller">
 	<ul class="bgpicker-dialog__icon-list clearfix" ng-class="color" ng-show="!loading">
 		<li ng-repeat="icon in model.icons">
-			<a href="#"  title="{{icon}}"  ng-click="model.pickIcon(icon)" prevent-default ng-bind-html="model.render(icon)"></a>
+			<a href="#" title="{{icon}}" ng-click="model.pickIcon(icon)" prevent-default ng-bind-html="model.render(icon)"></a>
 		</li>
 	</ul>
 </div>
