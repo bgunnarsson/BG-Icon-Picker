@@ -8,8 +8,18 @@ Inspired by the [Iconator package](https://our.umbraco.com/projects/backoffice-e
 - - -
 
 ## Installation
+
+### NuGet
+1. Install package through NuGet Package Manager
+2. Create the data type
+
+   **Location:** Developer > Data Types
+3. Configure the newly created data type.
+4. Use and enjoy.
+
+### Umbraco Package Section
 1. Install the package
-2. Configure the data type
+2. Configure the data type 
 
    **Location:** Developer > Data Types > BG: Icon Picker
 
