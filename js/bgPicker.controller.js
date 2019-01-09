@@ -95,7 +95,7 @@ angular.module("umbraco").controller("bgPicker.Controller", function ($scope, $h
 
 	// 
 	$scope.render = function (currentClassName) {
-		return $scope.pattern.replace("{0}", currentClassName);
+		return $scope.pattern.replace("{0}", currentClassName.replace(".", " "));
 	};
 
 	$scope.refresh = function() {
