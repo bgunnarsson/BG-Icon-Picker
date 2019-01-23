@@ -49,3 +49,15 @@ The icon picker returns a string with the icon name so it's really simple to wor
 ```
 <i class="@Model.Content.GetPropertyValue<string>("icon")"></i>
 ```
+
+## Using ModelsBuilder?
+```
+    [PropertyValueType(typeof(string))]
+    public class BgIconPickerValueConverter : PropertyValueConverterBase
+    {
+        public override bool IsConverter(PublishedPropertyType propertyType)
+        {
+            return propertyType.PropertyEditorAlias.Equals("bgIconPicker");
+        }
+    }
+```
