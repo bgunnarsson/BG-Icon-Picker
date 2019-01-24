@@ -51,6 +51,7 @@ The icon picker returns a string with the icon name so it's really simple to wor
 ```
 
 ## Using ModelsBuilder?
+[Matthew-wise](https://github.com/Matthew-Wise) wrote up a converter for ModelsBuilder:
 ```
     [PropertyValueType(typeof(string))]
     public class BgIconPickerValueConverter : PropertyValueConverterBase
