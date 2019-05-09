@@ -18,7 +18,7 @@ angular.module("umbraco").controller("bgPicker.Controller", function ($scope, $h
 		}
 	};
 
-	if ($scope.model.config.pattern != null && $scope.model.config.pattern != '') {
+	if ($scope.model.config.pattern !== null && $scope.model.config.pattern !== '') {
 		$scope.pattern = $scope.model.config.pattern;
 	};
 
@@ -47,18 +47,12 @@ angular.module("umbraco").controller("bgPicker.Controller", function ($scope, $h
 			styleRegex.compile(styleRegexPattern, "g");
 
 			if (hasMatches) {
-				var match = styleRegex.exec(data);
-
-				while (match != null) {
-					match = styleRegex.exec(data);
-
+                while ((match = styleRegex.exec(data)) !== null) {
 					// check if match has populated array
-					if (match != null && match.length > 1) {
-
-						//check if array already contains match and not on exclude list
+                    if (match.length > 1) {
+						//check if array already contains match
 						if (!(matches.indexOf(match[1]) > 0)) {
 							matches.push(match[1]);
-							hasMatches = true;
 						}
 					}
 				}
