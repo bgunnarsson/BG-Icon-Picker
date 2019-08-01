@@ -1,0 +1,76 @@
+
+$picker-start-height: 32px;
+
+.bgpicker {
+	max-width: 66.6%;
+	cursor: pointer;
+
+	span {
+		cursor: pointer;
+	}
+
+	&__unselected {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		height: $picker-start-height;
+		text-align: center;
+		font-weight: bold;
+		border: 1px dashed #bbbabf;
+		color: color(primary);
+		cursor: pointer;
+	}
+
+	&__pick,
+	&__remove {
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	&___pick {
+		width: auto;
+	}
+
+	&__selected {
+		height: 60px;
+		position: relative;
+		background: color(gray);
+
+		&:last-child {
+			margin-left: auto;
+		}
+
+		i {
+			font-size: 30px;
+			float: left;
+			line-height: 0.5;
+		}
+		em {
+			float: left;
+			margin: 21px 0 0 50px !important;
+			font-weight: bold;
+			font-style: normal;
+		}
+	}
+
+	&__icon,
+	&__remove {
+		position: absolute;
+		top: 50%;
+		-webkit-transform: translateY(-50%);
+		-moz-transform: translateY(-50%);
+				transform: translateY(-50%);
+	}
+
+	&__icon {
+		display: block;
+		left: 0px;
+	}
+
+	&__remove {
+		right: 0px;
+		color: color(red);
+		font-weight: bold;
+	}
+}

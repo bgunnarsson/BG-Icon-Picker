@@ -1,0 +1,16 @@
+
+# Umbraco
+#
+**/Umbraco.web/aspnet_client/
+**/Umbraco.web/media/
+**/Umbraco.web/imagecache/
+
+**/Umbraco.web/scripts/
+**/Umbraco.web/css/
+
+node_modules/
+**/bgIconPicker.Dev/node_modules/
+**/bgIconPicker.Dev/bower_components/
+.vscode/
+.vs/
+.git/

@@ -1,11 +1,11 @@
 angular.module("umbraco").controller("bgPicker.Controller", function ($scope, $http, assetsService, notificationsService) {
 	// SETUP
 	// =======================
-	
+
 	$scope.icons = [];
 	$scope.pattern = '<i class="{0}"></i>'; // DEFAULT ICON PATTERN
 	$scope.overlay = {
-		view: '/App_Plugins/bgIconPicker/views/bgPicker.dialog.html',
+		view: '/App_Plugins/bgIconPicker/bgPicker.dialog.html',
 		width: 500,
 		show: false,
 		title: 'Select an icon',
@@ -24,7 +24,7 @@ angular.module("umbraco").controller("bgPicker.Controller", function ($scope, $h
 
 	// PRIVATE FUNCTIONS
 	// =======================
-	
+
 	// Get the matching class names from the stylesheet
 	var getIcons = function () {
 		var stylePath = $scope.model.config.stylePath,
@@ -36,7 +36,7 @@ angular.module("umbraco").controller("bgPicker.Controller", function ($scope, $h
 		// Get the class names from the specified stylesheet,
 		// use angular http request to make a cached request for the stylesheet content.
 		$http({
-			method: 'GET', 
+			method: 'GET',
 			url: stylePath,
 			cache: true
 		})
@@ -47,12 +47,18 @@ angular.module("umbraco").controller("bgPicker.Controller", function ($scope, $h
 			styleRegex.compile(styleRegexPattern, "g");
 
 			if (hasMatches) {
-                while ((match = styleRegex.exec(data)) !== null) {
+				var match = styleRegex.exec(data);
+
+				while (match !== null) {
+					match = styleRegex.exec(data);
+
 					// check if match has populated array
-                    if (match.length > 1) {
-						//check if array already contains match
+					if (match !== null && match.length > 1) {
+
+						//check if array already contains match and not on exclude list
 						if (!(matches.indexOf(match[1]) > 0)) {
 							matches.push(match[1]);
+							hasMatches = true;
 						}
 					}
 				}
@@ -79,7 +85,7 @@ angular.module("umbraco").controller("bgPicker.Controller", function ($scope, $h
 
 	// HELPER FUNCTIONS
 	// =======================
-	
+
 	$scope.openDialog = function() {
 		$scope.overlay.show = true;
 		$scope.overlay.icons = $scope.icons;
@@ -87,9 +93,9 @@ angular.module("umbraco").controller("bgPicker.Controller", function ($scope, $h
 		$scope.overlay.pattern = $scope.pattern;
 	};
 
-	// 
+	//
 	$scope.render = function (currentClassName) {
-		return $scope.pattern.replace("{0}", currentClassName.replace(".", " "));
+		return $scope.pattern.replace("{0}", currentClassName);
 	};
 
 	$scope.refresh = function() {

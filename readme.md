@@ -1,27 +1,43 @@
 # BG: Icon Picker
-Icon picker for Umbraco 7.4.0+
-
 Data Type that enables you to use your own website icon set in the backoffice.
 
-- - -
-Inspired by the [Iconator package](https://our.umbraco.com/projects/backoffice-extensions/iconator/). Since the creator of that package doesn't respond to pull requests, I took matters into my own hands and redesigned it from the ground up with better functionality and styling.
-- - -
+
+### `V8`
+Umbraco versions: 8.x.x
+```
+PM> Install Package BG.Icon.Picker.v8
+```
+[Our.Umbraco.org Download](https://our.umbraco.com/packages/backoffice-extensions/bg-icon-picker-v8/)
+
+
+### `V7`
+Umbraco versions: 7.4.0-7.15.x
+```
+PM> Install Package BG.Icon.Picker
+```
+[Our.Umbraco.org Download](https://our.umbraco.com/packages/backoffice-extensions/bg-icon-picker/)
+***
+
 
 ## Installation
 
-### NuGet
+### `NuGet`
 1. Install package through NuGet Package Manager
 2. Create the data type
 
-   **Location:** Developer > Data Types
+   **Location V8:** Settings > Data Types > BG: Icon Picker
+
+   **Location V7:** Developer > Data Types > BG: Icon Picker
 3. Configure the newly created data type.
 4. Use and enjoy.
 
-### Umbraco Package Section
+### `Umbraco Package Section`
 1. Install the package
-2. Configure the data type 
+2. Configure the data type
 
-   **Location:** Developer > Data Types > BG: Icon Picker
+   **Location V8:** Settings > Data Types > BG: Icon Picker
+
+   **Location V7:** Developer > Data Types > BG: Icon Picker
 
 
 ## Configuring the Data Type:
@@ -44,14 +60,25 @@ It's recommended to _not use_ "icon" as class identifier so it won't interfere w
 <i class="{0}"></i>
 ```
 
+***
+
 ## Retrieving data from the icon picker:
 The icon picker returns a string with the icon name so it's really simple to work with.
+
+### `V8`
 ```
-<i class="@Model.Content.GetPropertyValue<string>("icon")"></i>
+<i class="@(Model.Value<string>("icon"))"></i>
 ```
 
-## Using ModelsBuilder?
-[Matthew-wise](https://github.com/Matthew-Wise) wrote up a converter for ModelsBuilder:
+### `V7`
+```
+<i class="@(Model.Content.GetPropertyValue<string>("icon"))"></i>
+```
+
+***
+
+## Using ModelsBuilder? (V7)
+[Matthew-wise](https://github.com/Matthew-Wise) wrote up a converter for ModelsBuilder.
 ```
     [PropertyValueType(typeof(string))]
     public class BgIconPickerValueConverter : PropertyValueConverterBase

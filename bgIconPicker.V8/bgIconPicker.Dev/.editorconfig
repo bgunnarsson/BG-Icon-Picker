@@ -1,0 +1,16 @@
+# top-most EditorConfig file
+root = true
+
+# Default settings:
+[*]
+charset = utf-8
+end_of_line = crlf
+indent_size = 4
+indent_style = tab
+insert_final_newline = true
+
+[*.{js,jsx,ts,tsx,json,config}]
+indent_size = 2
+
+[*.{html,cshtml}]
+charset = utf-8-bom

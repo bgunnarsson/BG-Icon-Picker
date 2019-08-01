@@ -1,0 +1,86 @@
+.bgpicker {
+  max-width: 66.6%;
+  cursor: pointer; }
+  .bgpicker span {
+    cursor: pointer; }
+  .bgpicker__unselected {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 32px;
+    text-align: center;
+    font-weight: bold;
+    border: 1px dashed #bbbabf;
+    color: #2152a3;
+    cursor: pointer; }
+    .bgpicker__unselected:hover {
+      border: 1px dashed #2152a3; }
+  .bgpicker__pick:hover, .bgpicker__remove:hover {
+    text-decoration: underline; }
+  .bgpicker___pick {
+    width: auto; }
+  .bgpicker__selected {
+    height: 60px;
+    position: relative; }
+    .bgpicker__selected:last-child {
+      margin-left: auto; }
+    .bgpicker__selected i {
+      font-size: 30px;
+      float: left;
+      line-height: 0.5; }
+    .bgpicker__selected em {
+      float: left;
+      margin: 21px 0 0 50px !important;
+      font-weight: bold;
+      font-style: normal; }
+  .bgpicker__icon, .bgpicker__remove {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%); }
+  .bgpicker__icon {
+    display: block;
+    left: 0px; }
+  .bgpicker__remove {
+    right: 0px;
+    color: #ed0f0f;
+    font-weight: bold; }
+
+.bgpicker-dialog {
+  padding-top: 20px; }
+  .bgpicker-dialog__icon-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 20px;
+    margin-left: -10px;
+    display: flex;
+    flex-flow: row wrap; }
+    .bgpicker-dialog__icon-list i {
+      font-size: 30px !important; }
+    .bgpicker-dialog__icon-list li {
+      display: flex;
+      flex-direction: column;
+      float: left;
+      margin: 0 0 10px 10px;
+      width: 14.46%;
+      height: 65px;
+      text-align: center; }
+      .bgpicker-dialog__icon-list li a {
+        font-size: 30px;
+        display: block;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background: #eaeaea;
+        color: #000;
+        transition: all .4s ease-in-out; }
+        .bgpicker-dialog__icon-list li a:hover {
+          text-decoration: none;
+          background: #2152a3;
+          color: #fff; }
+
+.nested-content__item .bgpicker {
+  max-width: 95% !important; }
+

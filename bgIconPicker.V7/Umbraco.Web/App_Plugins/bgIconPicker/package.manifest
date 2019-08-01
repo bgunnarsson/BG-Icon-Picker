@@ -3,7 +3,7 @@
         alias: "bgIconPicker",
         name: "BG: Icon Picker",
         editor: {
-            view: "~/App_Plugins/bgIconPicker/views/bgpicker.html"
+            view: "~/App_Plugins/bgIconPicker/bgpicker.html"
         },
         prevalues: {
             fields: [
@@ -12,10 +12,10 @@
                     description: 'Relative path to the stylesheet. Seperate stylesheet for the icons is recommended.',
                     key: 'stylePath',
                     view: 'requiredfield',
-                    validation: 
+                    validation:
                     [
                         {
-                            type: 'Required' 
+                            type: 'Required'
                         }
                     ]
                 },
@@ -24,10 +24,10 @@
                     description: 'Regex that matches the class name pattern.',
                     key: 'styleRegex',
                     view: 'requiredfield',
-                    validation: 
+                    validation:
                     [
                         {
-                            type: 'Required' 
+                            type: 'Required'
                         }
                     ]
                 },
@@ -41,10 +41,10 @@
         }
     }],
     javascript: [
-        "~/App_Plugins/bgIconPicker/js/bgPicker.controller.js",
-        "~/App_Plugins/bgIconPicker/js/bgPicker.dialog.controller.js"
-    ],
+		"~/App_Plugins/bgIconPicker/bgPicker.controller.js",
+		"~/App_Plugins/bgIconPicker/bgPicker.dialog.controller.js",
+	],
 	css: [
-		"~/App_Plugins/bgIconPicker/css/app.min.css"
+		"~/App_Plugins/bgIconPicker/css/styles.css"
 	]
 }
