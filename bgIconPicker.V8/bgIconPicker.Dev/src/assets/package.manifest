@@ -39,6 +39,6 @@
 		"~/App_Plugins/bgIconPicker/bgPicker.dialog.controller.js",
 	],
 	css: [
-		"~/App_Plugins/bgIconPicker/css/styles.css"
+		"~/App_Plugins/bgIconPicker/styles.css"
 	]
 }

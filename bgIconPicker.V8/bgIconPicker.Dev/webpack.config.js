@@ -11,7 +11,7 @@ module.exports = {
 		styles: './src/styles/styles.scss'
 	},
 	output: {
-		path: path.resolve(__dirname, 'build/css/'),
+		path: path.resolve(__dirname, 'build'),
 		filename: '[name].scss'
 	},
 	module: {
@@ -40,7 +40,7 @@ module.exports = {
 			},
 			{
 				from: path.resolve(`${CURRENT_WORKING_DIR}/src/actions/`),
-				to: path.resolve(`${CURRENT_WORKING_DIR}/build/actions/`)
+				to: path.resolve(`${CURRENT_WORKING_DIR}/build/`)
 			},
 			{
 				from: path.resolve(`${CURRENT_WORKING_DIR}/src/views/`),
