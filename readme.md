@@ -1,6 +1,8 @@
 # BG: Icon Picker
 Data Type that enables you to use your own website icon set in the backoffice.
 
+V7 Version will no longer be maintained.
+
 
 ### `V8`
 Umbraco versions: 8.x.x
@@ -10,7 +12,7 @@ PM> Install Package BG.Icon.Picker.v8
 [Our.Umbraco.org Download](https://our.umbraco.com/packages/backoffice-extensions/bg-icon-picker-v8/)
 
 
-### `V7`
+### `V7` - Is no longer maintained
 Umbraco versions: 7.4.0-7.15.x
 ```
 PM> Install Package BG.Icon.Picker
