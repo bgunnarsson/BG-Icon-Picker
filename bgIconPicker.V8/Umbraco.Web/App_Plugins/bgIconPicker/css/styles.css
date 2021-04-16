@@ -46,40 +46,43 @@
     color: #ed0f0f;
     font-weight: bold; }
 
-.bgpicker-dialog {
-  padding-top: 20px; }
-  .bgpicker-dialog__icon-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    margin-top: 20px;
-    margin-left: -10px;
-    display: flex;
-    flex-flow: row wrap; }
-    .bgpicker-dialog__icon-list i {
-      font-size: 30px !important; }
-    .bgpicker-dialog__icon-list li {
+.bgpicker-wrap .umb-overlay.umb-overlay-right,
+.bgpicker-wrap .umb-overlay.umb-overlay-right[style],
+.bgpicker-wrap [data-element="overlay"] {
+  width: auto !important;
+  width: 500px !important; }
+  @media screen and (max-width: 507px) {
+    .bgpicker-wrap .umb-overlay.umb-overlay-right,
+    .bgpicker-wrap .umb-overlay.umb-overlay-right[style],
+    .bgpicker-wrap [data-element="overlay"] {
+      width: 100% !important; } }
+
+.bgpicker-dialog__icon-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 20px;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(6, 1fr); }
+  .bgpicker-dialog__icon-list li {
+    display: block;
+    height: 65px; }
+    .bgpicker-dialog__icon-list li a {
       display: flex;
       flex-direction: column;
-      float: left;
-      margin: 0 0 10px 10px;
-      width: 14.46%;
-      height: 65px;
-      text-align: center; }
-      .bgpicker-dialog__icon-list li a {
-        font-size: 30px;
-        display: block;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        background: #eaeaea;
-        color: #000;
-        transition: all .4s ease-in-out; }
-        .bgpicker-dialog__icon-list li a:hover {
-          text-decoration: none;
-          background: #2152a3;
-          color: #fff; }
+      justify-content: center;
+      align-items: center;
+      font-size: 28px !important;
+      background: #eaeaea;
+      color: #000;
+      transition: all .4s ease-in-out;
+      width: 100%;
+      height: 100%; }
+      .bgpicker-dialog__icon-list li a:hover {
+        text-decoration: none;
+        background: #2152a3;
+        color: #fff; }
 
 .nested-content__item .bgpicker {
   max-width: 95% !important; }

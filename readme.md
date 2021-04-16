@@ -56,12 +56,6 @@ It's recommended to _not use_ "icon" as class identifier so it won't interfere w
 (icn-[^:]*?):before
 ```
 
-**Icon pattern:**
-"{0}" will be replaced with the icon regex.
-```
-<i class="{0}"></i>
-```
-
 ***
 
 ## Retrieving data from the icon picker:

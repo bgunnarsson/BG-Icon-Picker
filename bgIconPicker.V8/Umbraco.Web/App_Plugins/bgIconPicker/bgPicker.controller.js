@@ -1,6 +1,6 @@
 angular.module("umbraco").controller("bgPicker.Controller", function ($scope, $http, assetsService, notificationsService) {
 	$scope.icons = [];
-	$scope.pattern = '<i class="{0}"></i>'; // DEFAULT ICON PATTERN
+	$scope.pattern = '<span class="{0}"></span>'; // DEFAULT ICON PATTERN
 	$scope.overlay = {
 		view: '/App_Plugins/bgIconPicker/bgPicker.dialog.html',
 		width: 500,
@@ -15,9 +15,9 @@ angular.module("umbraco").controller("bgPicker.Controller", function ($scope, $h
 		}
 	};
 
-	if ($scope.model.config.pattern !== null && $scope.model.config.pattern !== '') {
-		$scope.pattern = $scope.model.config.pattern;
-	};
+	// if ($scope.model.config.pattern !== null && $scope.model.config.pattern !== '') {
+	// 	$scope.pattern = $scope.model.config.pattern;
+	// };
 
 	// Get the matching class names from the stylesheet
 	var getIcons = () => {
@@ -47,7 +47,7 @@ angular.module("umbraco").controller("bgPicker.Controller", function ($scope, $h
 					match = styleRegex.exec(response.data);
 
 					// check if match has populated array
-					if (match !== null && match.length > 1) {
+					if (match !== null && match.length > 0) {
 
 						//c heck if array already contains match and not on exclude list
 						if (!(matches.indexOf(match[1]) > 0)) {

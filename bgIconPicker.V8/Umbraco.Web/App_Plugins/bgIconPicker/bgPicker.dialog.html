@@ -5,7 +5,7 @@
 			<input type="text" style="width: 100%" ng-model="searchTerm" class="umb-search-field search-query input-block-level" placeholder="Filter..." umb-auto-focus>
 		</div>
 	</div>
-	<ul class="bgpicker-dialog__icon-list clearfix" ng-class="color" ng-show="!loading">
+	<ul class="bgpicker-dialog__icon-list" ng-class="color" ng-show="!loading">
 		<li ng-repeat="icon in model.icons | filter: searchTerm">
 			<a href="#" title="{{icon}}" ng-click="model.pickIcon(icon)" prevent-default ng-bind-html="model.render(icon)"></a>
 		</li>

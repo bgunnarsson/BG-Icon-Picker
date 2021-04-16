@@ -1,39 +1,43 @@
-$icon-dimensions: 60px;
-.bgpicker-dialog {
-	padding-top: 20px;
+$icon-dimensions: 65px;
 
+.bgpicker-wrap {
+	.umb-overlay.umb-overlay-right,
+	.umb-overlay.umb-overlay-right[style],
+	[data-element="overlay"] {
+		width: auto !important;
+		width: 500px !important;
+
+		@media screen and (max-width: 507px) {
+			width: 100% !important;
+		}
+	}
+}
+
+.bgpicker-dialog {
 	&__icon-list {
 		list-style: none;
 		padding: 0;
 		margin: 0;
 		margin-top: 20px;
-		margin-left: -10px;
-		display: flex;
-		flex-flow: row wrap;
-
-		i {
-			font-size: 30px!important
-		}
+		display: grid;
+		gap: 10px;
+		grid-template-columns: repeat(6, 1fr);
 
 		li {
-			display: flex;
-			flex-direction: column;
-			float: left;
-			margin: 0 0 10px 10px;
-			width: 14.46%;
-			height: 65px;
-			text-align: center;
+			display: block;
+			height: $icon-dimensions;
 
 			a {
-				font-size: 30px;
-				display: block;
-				height: 100%;
 				display: flex;
 				flex-direction: column;
 				justify-content: center;
+				align-items: center;
+				font-size: 28px !important;
 				background: color(gray);
 				color: #000;
 				transition: all .4s ease-in-out;
+				width: 100%;
+				height: 100%;
 
 				&:hover {
 					text-decoration: none;

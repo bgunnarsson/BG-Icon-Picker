@@ -21,7 +21,7 @@
                 },
                 {
                     label: 'Class name regex*',
-                    description: 'Regex that matches the class name pattern.',
+                    description: 'Regex that matches the class name pattern of your icon set.',
                     key: 'styleRegex',
                     view: 'requiredfield',
                     validation:
@@ -30,12 +30,6 @@
                             type: 'Required'
                         }
                     ]
-                },
-                {
-                    label: 'Icon pattern',
-                    description: 'Default: &lt;i class="{0}"&gt;&lt;/i&gt;. "{0}" will be replaced by the pattern you supply.',
-                    key: 'pattern',
-                    view: 'TextString'
                 }
             ]
         }
